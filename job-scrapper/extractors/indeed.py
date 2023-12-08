@@ -45,7 +45,7 @@ def extract_indeed_jobs(keyword):
                     "link": f"https://kr.indeed.com{link}",
                     "company": company.string.replace(","," "),
                     "location": location.string.replace(","," "),
-                    "position": title.replace(","," "),
+                    "position": title.replace(","," ").replace("의 전체 세부 정보",""),
                 }
                 results.append(job_data)
     return results
